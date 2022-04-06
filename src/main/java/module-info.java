@@ -1,9 +1,13 @@
-module com.n2mbot.n4mbot {
+module com.n2mbot.n4mbot
+{
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
     requires org.controlsfx.controls;
     requires javafx.graphics;
+//    requires google.cloud.dialogflow;
+//    requires proto.google.cloud.dialogflow.v2;
+    requires gax;
 
 
     exports com.n4mbot.master.hello;

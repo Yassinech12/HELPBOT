@@ -33,24 +33,32 @@ public class LoginController {
     private Label login_seConnecterButton;
 
 
+    DataBaseConnection connectnow = new DataBaseConnection();
+
     public void login_seConnecterButtonOnAction(ActionEvent e) {
-        if (login_usernameTextField.getText().isBlank() == false && login_passwordPasswordField.getText().isBlank() == false) {
+        boolean txtF = login_usernameTextField.getText().isBlank();
+        boolean pswF = login_passwordPasswordField.getText().isBlank();
+        if (txtF == false && pswF ==  false) {
             validateLogin();
         } else {
-            login_messageLabel.setText("Entrer votre nom d'utilisateur et mot de passe");
+            login_messageLabel.setText("Nom d'utilisateur ou Mot de passe est Vide!!");
         }
     }
 
-    @FXML
     public void login_quitterButtonOnAction(ActionEvent e) {
         Stage stage = (Stage) login_quitterButton.getScene().getWindow();
         stage.close();
     }
 
-    DataBaseConnection connectnow = new DataBaseConnection();
+    public void afficherCommencer(ActionEvent e) {
+        showPerButton(login_sIncrireButton, RegisterApplication.class.getResource("register.fxml"));
+    }
 
-    @FXML
-    public void validateLogin() {
+    public void afficherHome() {
+        show(HomeApplication.class.getResource("home.fxml"));
+    }
+
+    private void validateLogin() {
         String username = login_usernameTextField.getText();
         String password = login_passwordPasswordField.getText();
         String verifyLogin = "SELECT count(1) from accounts where username = '" + login_usernameTextField.getText() + "' and password = '" + login_passwordPasswordField.getText() + "' ";
@@ -67,14 +75,6 @@ public class LoginController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public void afficherHome() {
-        show(HomeApplication.class.getResource("Home.fxml"));
-    }
-
-    public void afficherCommencer(ActionEvent e) {
-        showPerButton(login_sIncrireButton, RegisterApplication.class.getResource("register.fxml"));
     }
 
     private void showPerButton(Button button, URL url) {
@@ -98,7 +98,7 @@ public class LoginController {
             FXMLLoader fxmlLoader = new FXMLLoader(url);
             Stage primaryStage = new Stage();
             Scene scene = new Scene(fxmlLoader.load());
-            primaryStage.setTitle("4MNBot");
+            primaryStage.setTitle("N4MBot");
             primaryStage.initStyle(StageStyle.UNDECORATED);
             primaryStage.setScene(scene);
             primaryStage.show();

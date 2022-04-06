@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="680.0" prefWidth="980.0" styleClass="anchore" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.n4mbot.master.hello.HelloController">
+<AnchorPane prefHeight="505.0" prefWidth="980.0" styleClass="anchore" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.n4mbot.master.hello.HelloController">
     <children>
-        <Pane layoutY="140.0" prefHeight="400.0" prefWidth="980.0" style="-fx-background-color: #6984d1;" styleClass="pane">
+        <Pane layoutY="63.0" prefHeight="400.0" prefWidth="980.0" style="-fx-background-color: #6984d1;" styleClass="pane">
             <children>
                 <Label layoutX="479.0" layoutY="71.0" prefHeight="45.0" prefWidth="415.0" text="Découvrer notre chatbot médicale" textFill="WHITE">
                     <font>
@@ -27,7 +27,7 @@
                         <Font name="MV Boli" size="24.0" />
                     </font>
                 </Label>
-                <Pane layoutY="-46.0" prefHeight="492.0" prefWidth="415.0" style="-fx-background-color: linear-gradient( to left top,#36096d, #37d5d6 );" styleClass="box">
+                <Pane layoutY="-66.0" prefHeight="512.0" prefWidth="415.0" style="-fx-background-color: linear-gradient( to left top,#36096d, #37d5d6 );" styleClass="box">
                     <children>
                         <ImageView fitHeight="308.0" fitWidth="378.0" layoutX="34.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -50,9 +50,15 @@
                             </font>
                         </Label>
                     </children></Pane>
-                <Button fx:id="helloLogin" layoutX="786.0" layoutY="310.0" mnemonicParsing="false" onAction="#afficherLoginOnAction" text="J'ai déjà un compte" />
+                <Button fx:id="helloLogin" layoutX="786.0" layoutY="310.0" mnemonicParsing="false" onAction="#afficherLoginOnAction" stylesheets="@style.css" text="J'ai déjà un compte" />
                 <Button fx:id="helloCommencer" layoutX="441.0" layoutY="310.0" mnemonicParsing="false" onAction="#afficherCommencerOnAction" prefHeight="35.0" prefWidth="126.0" styleClass="button" stylesheets="@style.css" text="Commencer" />
+                <Button fx:id="closeButton" layoutX="926.0" layoutY="1.0" mnemonicParsing="false" onAction="#closeHomeOnAcion" prefWidth="54.0" style="-fx-background-color: transparent;" text="X" textFill="#070707">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
             </children>
         </Pane>
     </children>
+
 </AnchorPane>

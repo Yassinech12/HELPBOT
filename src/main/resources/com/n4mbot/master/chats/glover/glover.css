@@ -1,0 +1,46 @@
+.anchore{
+    -fx-background-color: linear-gradient( to right ,#2C3E50, #FD746C);
+}
+.pane{
+    -fx-background-color: #2C3E50;
+}
+.txt{
+    -fx-background-color: #0B486B;
+    -fx-background-radius: 100px;
+}
+.txtf{
+    -fx-background-color: #8ca8a2;
+    -fx-background-radius: 100px;
+}
+.texte{
+    -fx-background-radius: 100px;
+}
+.butt{
+    -fx-font-weight: bold;
+    -fx-background-color: #0B486B;
+    -fx-background-radius: 32;
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+}
+.butt:hover{
+    -fx-font-weight: bold;
+    -fx-background-color: white;
+    -fx-background-radius: 32;
+    -fx-font-size: 16;
+    -fx-text-fill: #2C3E50 ;
+    -fx-background-color:  white;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-border-color:#2C3E50;
+}
+.butt:pressed{
+    -fx-font-weight: bold;
+    -fx-background-color: white;
+    -fx-background-radius: 32;
+    -fx-font-size: #2C3E50 ;
+    -fx-background-color: #2C3E50;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-rotate: 10;
+}
+/*0B486B

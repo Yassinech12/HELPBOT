@@ -16,7 +16,8 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene);
-        stage.setTitle("4MNBot");
+        stage.setTitle("N4MBot");
+        stage.setIconified(false);
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.show();
     }

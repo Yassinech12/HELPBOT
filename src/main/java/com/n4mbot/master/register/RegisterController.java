@@ -40,11 +40,34 @@ public class RegisterController {
     @FXML
     private TextField usernameTextField;
     @FXML
-            private static int k=1;
+    private static int k = 1;
     /// Connection DataBase
     DataBaseConnection connectnow = new DataBaseConnection();
 
+    public void registerUser() {
+        String firstname = firstnameTextField.getText();
+        String lastname = lastnameTextField.getText();
+        String username = usernameTextField.getText();
+        String password = setPasswordField.getText();
+        String insertToRegister = "insert into accounts(firstname,lastname,username,password) values('" + firstname + "','" + lastname + "','" + username + "','" + password + "');";
+        try {
+            connectnow.stm.executeUpdate(insertToRegister);
+            System.out.println("succès");
+            if (k != 0) {
+                afficherLogin();
+            }
+        } catch (SQLIntegrityConstraintViolationException a) {
+            confirmPasswordLabel.setText("Le Nom d'utilisateur déja existe");
+            k = 0;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
     //// Methods On Action
+
     public void registerButtonOnAction(ActionEvent event) {
         int a = confirmPassword();
         if (a == 1 && k != 0) {
@@ -60,11 +83,10 @@ public class RegisterController {
         showPerButton(registerButton, LoginApplication.class.getResource("login.fxml"));
     }
 
-    public void afficherHello() {
-        showPerButton(precedentButton, HelloApplication.class.getResource("hello.fxml"));
-    }
+    public void afficherHello() { showPerButton(precedentButton, HelloApplication.class.getResource("hello.fxml")); }
 
     //  Methods
+
     private void closeByButton(Button button) {
         Stage stage = (Stage) button.getScene().getWindow();
         stage.close();
@@ -110,27 +132,6 @@ public class RegisterController {
             stage.close();
         } catch (Exception ex) {
             ex.printStackTrace();
-        }
-    }
-
-    public void registerUser() {
-        String firstname = firstnameTextField.getText();
-        String lastname = lastnameTextField.getText();
-        String username = usernameTextField.getText();
-        String password = setPasswordField.getText();
-        String insertToRegister = "insert into accounts(firstname,lastname,username,password) values('" + firstname + "','" + lastname + "','" + username + "','" + password + "');";
-        try {
-            connectnow.stm.executeUpdate(insertToRegister);
-            System.out.println("succès");
-            if (k!=0){
-            afficherLogin();}
-        } catch (SQLIntegrityConstraintViolationException a){
-            confirmPasswordLabel.setText("Le Nom d'utilisateur déja existe");
-            k=0;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            e.getCause();
         }
     }
 

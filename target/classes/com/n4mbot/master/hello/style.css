@@ -13,8 +13,6 @@
     -fx-background-radius: 32;
     -fx-font-size: 16;
     -fx-text-fill: white;
-
-
 }
 .button:hover{
     -fx-font-weight: bold;

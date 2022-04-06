@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="937.0" styleClass="anchore" stylesheets="@glover.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chat3.HelloController">
+    <children>
+        <Pane prefHeight="690.0" prefWidth="262.0" styleClass="pane" stylesheets="@glover.css">
+            <children>
+                <Label layoutX="51.0" layoutY="240.0" text="ROBOT 3" textFill="WHITE">
+                    <font>
+                        <Font name="MV Boli" size="28.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="221.0" fitWidth="244.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/Robot 3.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="262.0" layoutY="-1.0" prefHeight="61.0" prefWidth="676.0" styleClass="pane" stylesheets="glover.css">
+            <children>
+                <Label layoutX="22.0" layoutY="19.0" text="ROBOT 3" textFill="WHITE">
+                    <font>
+                        <Font name="Ebrima Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Circle fill="DODGERBLUE" layoutX="114.0" layoutY="32.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                <Label layoutX="126.0" layoutY="15.0" text="en ligne">
+                    <font>
+                        <Font name="MV Boli" size="18.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="627.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/téléchargement-removebg-preview.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <ScrollPane layoutX="262.0" layoutY="60.0" prefHeight="572.0" prefWidth="676.0" styleClass="anchore" stylesheets="@glover.css">
+            <content>
+                <Pane prefHeight="571.0" prefWidth="674.0" styleClass="anchore" stylesheets="@glover.css">
+                    <children>
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="615.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/téléchargement-removebg-preview (1).png" />
+                            </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="😀" />
+                        <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="14.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/Robot 3.png" />
+                            </image>
+                        </ImageView>
+                  <Label layoutX="69.0" layoutY="47.0" prefHeight="32.0" prefWidth="160.0" styleClass="txt" stylesheets="glover.css" text="    Hi :)">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="446.0" layoutY="92.0" prefHeight="32.0" prefWidth="160.0" styleClass="txtf" stylesheets="glover.css" text="  Salut !">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </Pane>
+            </content>
+        </ScrollPane>
+        <Pane layoutX="263.0" layoutY="632.0" prefHeight="61.0" prefWidth="676.0">
+            <children>
+                <TextField layoutX="103.0" layoutY="8.0" opacity="0.99" prefHeight="25.0" prefWidth="451.0" promptText="Entrer votre texte " styleClass="texte">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <Button layoutX="579.0" layoutY="8.0" mnemonicParsing="false" styleClass="butt" stylesheets="glover.css" text="Envoyer" />
+
+            </children>
+
+        </Pane>
+    </children>
+</AnchorPane>

@@ -17,6 +17,8 @@ public class HelloController {
     private Button helloCommencer;
     @FXML
     private Button helloLogin;
+    @FXML
+    private Button closeButton;
 
 
     public void afficherLoginOnAction(ActionEvent e) {
@@ -41,5 +43,10 @@ public class HelloController {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+    public void closeHomeOnAcion(ActionEvent e){
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
     }
 }

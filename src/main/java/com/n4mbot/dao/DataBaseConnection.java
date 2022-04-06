@@ -8,7 +8,6 @@ public class DataBaseConnection {
     public Connection databaseLink;
     public Statement stm;
 
-    private static final String USERNAME = "root";
     private static final String PASSWORD = "";
     private static final int PORT = 3306;
     private static final String DB_NAME = "logindb";
