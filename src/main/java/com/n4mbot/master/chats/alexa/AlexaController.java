@@ -1,22 +1,16 @@
 package com.n4mbot.master.chats.alexa;
 
 import com.n4mbot.master.home.HomeApplication;
-//import com.n4mbot.service.DetectIntentTexts;
 import com.n4mbot.service.Main;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.*;
@@ -44,7 +38,7 @@ public class AlexaController {
     @FXML
     private VBox robotVBox;
 
-    private Main main = new Main();
+    private final Main main = new Main();
     static  int i;
 
     public void goBackOnAction(ActionEvent event) {
@@ -52,7 +46,7 @@ public class AlexaController {
     }
 
 
-    public void send2() throws IOException {
+    public void send2(){
         String message = messgaeTextField.getText();
         if (!message.isEmpty()) {
             clientVBox.getChildren().add(addLebelToVBoxClient(message));
