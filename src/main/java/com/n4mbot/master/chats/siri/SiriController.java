@@ -59,7 +59,7 @@ public class SiriController {
         label.setFont(Font.font("System", FontPosture.findByName("BOLD"),14));
         label.setTextFill(Paint.valueOf("White"));
         label.setStyle("-fx-background-radius: 20px" + ";-fx-background-color: Transparent");
-
+        label.setWrapText(true);
         return label;
     }
 

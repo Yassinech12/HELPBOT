@@ -58,7 +58,7 @@
             <content>
                 <Pane maxHeight="1.7976931348623157E308" prefHeight="571.0" prefWidth="674.0" styleClass="anchore" stylesheets="@siri.css">
                     <children>
-                        <VBox fx:id="robotVBox" layoutX="76.0" layoutY="75.0" prefHeight="521.0" prefWidth="313.0" />
+                        <VBox fx:id="robotVBox" layoutX="76.0" layoutY="75.0" prefHeight="468.0" prefWidth="262.0" />
                         <ImageView fitHeight="61.0" fitWidth="49.0" layoutX="15.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@images/siriChat.png" />
@@ -69,7 +69,7 @@
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <VBox fx:id="clientVBox" alignment="TOP_RIGHT" layoutX="315.0" layoutY="48.0" maxHeight="1.7976931348623157E308" prefHeight="504.0" prefWidth="282.0" style="-fx-padding: 10;">
+                        <VBox fx:id="clientVBox" alignment="TOP_RIGHT" layoutX="344.0" layoutY="48.0" maxHeight="1.7976931348623157E308" prefHeight="504.0" prefWidth="253.0" style="-fx-padding: 10;">
                             <opaqueInsets>
                                 <Insets />
                             </opaqueInsets>

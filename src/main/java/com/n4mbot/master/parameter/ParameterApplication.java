@@ -1,4 +1,4 @@
-package com.n4mbot.master.login;
+package com.n4mbot.master.parameter;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,13 +8,13 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class LoginApplication extends Application {
+public class ParameterApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-            primaryStage.setTitle("N4MBot-Login");
+            FXMLLoader fxmlLoader = new FXMLLoader(ParameterApplication.class.getResource("parameter.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            primaryStage.setTitle("N4MBot-Parameter");
             primaryStage.initStyle(StageStyle.UNDECORATED);
             primaryStage.setScene(scene);
             primaryStage.show();

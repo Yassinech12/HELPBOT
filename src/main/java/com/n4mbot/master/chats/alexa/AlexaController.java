@@ -11,6 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -39,6 +40,9 @@ public class AlexaController {
     private VBox robotVBox;
     @FXML
     private ImageView imageViewMe;
+    @FXML
+    private ScrollPane scrollPane;
+
 
     private final Main main = new Main("alexa.xml");
 
@@ -65,7 +69,7 @@ public class AlexaController {
         label.setFont(Font.font("System", FontPosture.findByName("BOLD"),14));
         label.setTextFill(Paint.valueOf("White"));
         label.setStyle("-fx-background-radius: 20px" + ";-fx-background-color: Transparent");
-
+        label.setWrapText(true);
         return label;
     }
 

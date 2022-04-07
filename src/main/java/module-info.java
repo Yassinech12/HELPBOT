@@ -31,4 +31,7 @@ module com.n2mbot.n4mbot
     exports com.n4mbot.master.chats.siri;
     opens com.n4mbot.master.chats.siri to javafx.fxml;
 
+    exports com.n4mbot.master.parameter;
+    opens com.n4mbot.master.parameter to javafx.fxml;
+
 }

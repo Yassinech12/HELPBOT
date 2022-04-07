@@ -3,6 +3,7 @@ package com.n4mbot.master.home;
 import com.n4mbot.master.chats.alexa.AlexaApplication;
 import com.n4mbot.master.chats.glover.GloverApplication;
 import com.n4mbot.master.chats.siri.SiriApplication;
+import com.n4mbot.master.parameter.ParameterApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,8 +38,6 @@ public class HomeController {
     @FXML
     private Button siriHome;
 
-    @FXML
-    private Button sittingHome;
 
     public void closeHomeOnAcion(ActionEvent e){
         Stage stage = (Stage) closeButton.getScene().getWindow();
@@ -76,7 +75,7 @@ public class HomeController {
 
     @FXML
     void showSettingHome(ActionEvent event) {
-
+        showOnAction(ParameterApplication.class.getResource("parameter.fxml"));
     }
 
 
@@ -91,6 +90,19 @@ public class HomeController {
                 primaryStage.show();
                 Stage stage = (Stage) button.getScene().getWindow();
                 stage.close();
+            } catch (Exception ed) {
+                ed.printStackTrace();
+            }
+        }
+        private void showOnAction(URL url){
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(url);
+                Scene scene = new Scene(fxmlLoader.load());
+                Stage primaryStage = new Stage();
+                primaryStage.setTitle("N4MBot");
+                primaryStage.initStyle(StageStyle.UNDECORATED);
+                primaryStage.setScene(scene);
+                primaryStage.show();
             } catch (Exception ed) {
                 ed.printStackTrace();
             }

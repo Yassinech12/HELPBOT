@@ -58,17 +58,17 @@
                 <Font size="14.0" />
             </font>
         </TextField>
-        <Button fx:id="registerButton" layoutX="672.0" layoutY="641.0" mnemonicParsing="false" onAction="#registerButtonOnAction" opacity="0.99" prefHeight="20.0" prefWidth="94.0" style="-fx-background-color: #6984d1;" text="Valider" textFill="#efeaff" AnchorPane.rightAnchor="150.0">
+        <Button fx:id="registerButton" layoutX="672.0" layoutY="641.0" mnemonicParsing="false" onAction="#registerButtonOnAction" opacity="0.99" prefHeight="20.0" prefWidth="94.0" style="-fx-background-color: #6984d1; -fx-cursor: hand;" text="Valider" textFill="#efeaff" AnchorPane.rightAnchor="150.0">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </Button>
-        <RadioButton layoutX="83.0" layoutY="495.0" mnemonicParsing="false" text="Homme" textFill="#5e4e4e">
+        <RadioButton fx:id="homme" layoutX="83.0" layoutY="495.0" mnemonicParsing="false" text="Homme" textFill="#5e4e4e">
             <font>
                 <Font name="Sylfaen" size="14.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="169.0" layoutY="495.0" mnemonicParsing="false" text="Femme" textFill="#5e4e4e">
+        <RadioButton fx:id="femme" layoutX="169.0" layoutY="495.0" mnemonicParsing="false" text="Femme" textFill="#5e4e4e">
             <font>
                 <Font name="Sylfaen" size="14.0" />
             </font>

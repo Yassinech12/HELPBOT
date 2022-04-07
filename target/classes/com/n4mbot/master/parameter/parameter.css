@@ -1,0 +1,8 @@
+.anchore{
+    -fx-background-color:#2C3E50;
+}
+.anchorepane{
+    -fx-background-color: linear-gradient( to bottom ,#2C3E50,#8ca8a2);
+}
+
+
