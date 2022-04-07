@@ -29,7 +29,7 @@
         </AnchorPane>
         <AnchorPane prefHeight="400.0" prefWidth="400.0">
             <children>
-                <Button  layoutX="53.0" layoutY="256.0" mnemonicParsing="false" onAction="#login_seConnecterButtonOnAction" prefHeight="39.0" prefWidth="147.0" style="-fx-background-color: #6984d1;" text="Se Connecter" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                <Button fx:id="seConnecterButton" layoutX="53.0" layoutY="256.0" mnemonicParsing="false" onAction="#seConnecterOnAction" prefHeight="39.0" prefWidth="147.0" style="-fx-background-color: #6984d1; -fx-cursor: hand;" text="Se Connecter" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                     <font>
                         <Font name="System Bold Italic" size="18.0" />
                     </font>
@@ -39,7 +39,7 @@
                         <Image url="@images/user.png" />
                     </image>
                 </ImageView>
-                <TextField fx:id="login_usernameTextField" layoutX="169.0" layoutY="155.0" prefHeight="30.0" prefWidth="188.0" promptText="Nom d'utilisateur" />
+                <TextField fx:id="userName" layoutX="169.0" layoutY="155.0" prefHeight="30.0" prefWidth="188.0" promptText="Nom d'utilisateur" style="-fx-cursor: text;" />
                 <Label layoutX="23.0" layoutY="160.0" text="Nom d'utilisateur :">
                     <font>
                         <Font size="16.0" />
@@ -50,7 +50,7 @@
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
-                <Button fx:id="login_sIncrireButton" layoutX="231.0" layoutY="309.0" mnemonicParsing="false" onAction="#afficherCommencer" style="-fx-background-color: transparent; -fx-cursor: hand;" text="S'incrire!" textFill="#0097ff" underline="true">
+                <Button fx:id="incrireButton" layoutX="231.0" layoutY="309.0" mnemonicParsing="false" onAction="#afficherCommencer" style="-fx-background-color: transparent; -fx-cursor: hand;" text="S'incrire!" textFill="#0097ff" underline="true">
                     <font>
                         <Font name="System Bold Italic" size="14.0" />
                     </font>
@@ -60,13 +60,13 @@
                         <Font size="16.0" />
                     </font>
                 </Label>
-                <Button fx:id="login_quitterButton" layoutX="217.0" layoutY="256.0" mnemonicParsing="false" onAction="#login_quitterButtonOnAction" prefHeight="36.0" prefWidth="140.0" style="-fx-background-color: #bc2b2b;" text="Quitter" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                <Button fx:id="quitterButton" layoutX="217.0" layoutY="256.0" mnemonicParsing="false" onAction="#quitterOnAction" prefHeight="36.0" prefWidth="140.0" style="-fx-background-color: #bc2b2b; -fx-cursor: hand;" text="Quitter" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                     <font>
                         <Font name="System Bold Italic" size="18.0" />
                     </font>
                 </Button>
-                <Label fx:id="login_messageLabel" alignment="CENTER" layoutX="28.0" layoutY="123.0" prefHeight="17.0" prefWidth="345.0" textFill="#dd1d1d" />
-                <PasswordField fx:id="login_passwordPasswordField" layoutX="169.0" layoutY="200.0" prefHeight="30.0" prefWidth="188.0" promptText="**********" />
+                <Label fx:id="messageLabel" alignment="CENTER" layoutX="28.0" layoutY="123.0" prefHeight="17.0" prefWidth="345.0" textFill="#dd1d1d" />
+                <PasswordField fx:id="password" layoutX="169.0" layoutY="200.0" prefHeight="30.0" prefWidth="188.0" promptText="**********" style="-fx-cursor: text;" />
             </children>
         </AnchorPane>
     </children>

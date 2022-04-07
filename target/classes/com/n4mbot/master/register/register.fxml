@@ -74,7 +74,7 @@
             </font>
         </RadioButton>
         <Group layoutX="106.0" layoutY="549.0" />
-        <Button fx:id="closeButton" layoutX="791.0" layoutY="641.0" mnemonicParsing="false" onAction="#closeButtonOnAction" opacity="0.99" prefHeight="20.0" prefWidth="94.0" style="-fx-background-color: #6984d1; -fx-cursor: hand;" text="Exit" textFill="#fcfcfc" AnchorPane.rightAnchor="34.599999999999994">
+        <Button fx:id="closeButton" layoutX="791.0" layoutY="641.0" mnemonicParsing="false" onAction="#closeButtonOnAction" opacity="0.99" prefHeight="20.0" prefWidth="94.0" style="-fx-background-color: #bc2b2b; -fx-cursor: hand;" text="Exit" textFill="#fcfcfc" AnchorPane.rightAnchor="34.599999999999994">
             <font>
                 <Font name="System Bold Italic" size="14.0" />
             </font>

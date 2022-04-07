@@ -20,90 +20,100 @@ import java.sql.ResultSet;
 public class LoginController {
 
     @FXML
-    private Button login_sIncrireButton;
+    private Button incrireButton;
+
     @FXML
-    private Button login_quitterButton;
+    private Label messageLabel;
+
     @FXML
-    private TextField login_usernameTextField;
+    private PasswordField password;
+
     @FXML
-    private PasswordField login_passwordPasswordField;
+    private Button quitterButton;
+
     @FXML
-    private Label login_messageLabel;
+    private Button seConnecterButton;
+
     @FXML
-    private Label login_seConnecterButton;
+    private TextField userName;
 
 
     DataBaseConnection connectnow = new DataBaseConnection();
 
-    public void login_seConnecterButtonOnAction(ActionEvent e) {
-        boolean txtF = login_usernameTextField.getText().isBlank();
-        boolean pswF = login_passwordPasswordField.getText().isBlank();
-        if (txtF == false && pswF ==  false) {
-            validateLogin();
-        } else {
-            login_messageLabel.setText("Nom d'utilisateur ou Mot de passe est Vide!!");
-        }
-    }
-
-    public void login_quitterButtonOnAction(ActionEvent e) {
-        Stage stage = (Stage) login_quitterButton.getScene().getWindow();
+    @FXML
+    public void quitterOnAction(ActionEvent e) {
+        Stage stage = (Stage) quitterButton.getScene().getWindow();
         stage.close();
     }
 
+    @FXML
+    public void seConnecterOnAction(ActionEvent e) {
+         if (e.getSource() == seConnecterButton )  {
+             boolean txtF = userName.getText().isBlank();
+             boolean pswF = password.getText().isBlank();
+             if (txtF == false && pswF ==  false) {
+                 validateLogin();
+             } else {
+                 messageLabel.setText("Nom d'utilisateur ou Mot de passe est Vide!!");
+             }
+         }
+    }
+
+    @FXML
     public void afficherCommencer(ActionEvent e) {
-        showPerButton(login_sIncrireButton, RegisterApplication.class.getResource("register.fxml"));
+        showPerButton(incrireButton, RegisterApplication.class.getResource("register.fxml"));
     }
 
-    public void afficherHome() {
-        show(HomeApplication.class.getResource("home.fxml"));
-    }
-
-    private void validateLogin() {
-        String username = login_usernameTextField.getText();
-        String password = login_passwordPasswordField.getText();
-        String verifyLogin = "SELECT count(1) from accounts where username = '" + login_usernameTextField.getText() + "' and password = '" + login_passwordPasswordField.getText() + "' ";
-        try {
-            ResultSet queryResult = connectnow.stm.executeQuery(verifyLogin);
-            while (queryResult.next()) {
-                if (queryResult.getInt(1) == 1) {
-                    login_messageLabel.setText("Bienvenue!");
-                    afficherHome();
-                } else {
-                    login_messageLabel.setText("Nom d'utilisateur ou mot de passe incorrect.");
+        private void validateLogin() {
+            String username = userName.getText();
+            String passwordV = password.getText();
+            String verifyLogin = "SELECT count(1) from accounts where username = '" + userName.getText() + "' and password = '" + password.getText() + "' ";
+            try {
+                ResultSet queryResult = connectnow.stm.executeQuery(verifyLogin);
+                while (queryResult.next()) {
+                    if (queryResult.getInt(1) == 1) {
+                        messageLabel.setText("Bienvenue!");
+                        afficherHome();
+                    } else {
+                        messageLabel.setText("Nom d'utilisateur ou mot de passe incorrect.");
+                    }
                 }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-    }
 
-    private void showPerButton(Button button, URL url) {
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(url);
-            Stage primaryStage = new Stage();
-            Scene scene = new Scene(fxmlLoader.load());
-            primaryStage.setTitle("4MNBot");
-            primaryStage.initStyle(StageStyle.UNDECORATED);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-            Stage stage = (Stage) button.getScene().getWindow();
-            stage.close();
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        private void afficherHome() {
+            showPerButton(seConnecterButton, HomeApplication.class.getResource("home.fxml"));
         }
-    }
 
-    private void show(URL url) {
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(url);
-            Stage primaryStage = new Stage();
-            Scene scene = new Scene(fxmlLoader.load());
-            primaryStage.setTitle("N4MBot");
-            primaryStage.initStyle(StageStyle.UNDECORATED);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        private void showPerButton(Button button, URL url) {
+            try{
+                FXMLLoader fxmlLoader = new FXMLLoader(url);
+                Stage primaryStage = new Stage();
+                Scene scene = new Scene(fxmlLoader.load());
+                primaryStage.setTitle("N4MBot-Home");
+                primaryStage.initStyle(StageStyle.UNDECORATED);
+                primaryStage.setScene(scene);
+                primaryStage.show();
+                Stage stage = (Stage) button.getScene().getWindow();
+                stage.close();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         }
-    }
-} ////// FIN DE LA CLASSE LoginController
+
+//        private void show(URL url) {
+//            try{
+//                FXMLLoader fxmlLoader = new FXMLLoader(url);
+//                Stage primaryStage = new Stage();
+//                Scene scene = new Scene(fxmlLoader.load());
+//                primaryStage.setTitle("N4MBot");
+//                primaryStage.initStyle(StageStyle.UNDECORATED);
+//                primaryStage.setScene(scene);
+//                primaryStage.show();
+//            } catch (Exception ex) {
+//                ex.printStackTrace();
+//            }
+//        }
+}
