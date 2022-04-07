@@ -1,6 +1,8 @@
 package com.n4mbot.master.home;
 
 import com.n4mbot.master.chats.alexa.AlexaApplication;
+import com.n4mbot.master.chats.glover.GloverApplication;
+import com.n4mbot.master.chats.siri.SiriApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,11 +17,33 @@ import java.net.URL;
 public class HomeController {
 
     @FXML
-    private Button closeButton;
-    @FXML
     private Button alexa;
+
     @FXML
     private Button alexaHome;
+
+    @FXML
+    private Button closeButton;
+
+    @FXML
+    private Button glover;
+
+    @FXML
+    private Button gloverHome;
+
+    @FXML
+    private Button siri;
+
+    @FXML
+    private Button siriHome;
+
+    @FXML
+    private Button sittingHome;
+
+    public void closeHomeOnAcion(ActionEvent e){
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
+    }
 
     public void showAlexa(ActionEvent event) {
         showButtonOnAction(alexa, AlexaApplication.class.getResource("alexa.fxml"));
@@ -29,10 +53,32 @@ public class HomeController {
         showButtonOnAction(alexaHome, AlexaApplication.class.getResource("alexa.fxml"));
     }
 
-    public void closeHomeOnAcion(ActionEvent e){
-        Stage stage = (Stage) closeButton.getScene().getWindow();
-        stage.close();
+    public void showSiri(ActionEvent event) {
+        showButtonOnAction(siri, SiriApplication.class.getResource("siri.fxml"));
     }
+
+    @FXML
+    void showSiriHome(ActionEvent event) {
+        showButtonOnAction(siriHome, SiriApplication.class.getResource("siri.fxml"));
+
+    }
+
+    @FXML
+    void showGlover(ActionEvent event) {
+        showButtonOnAction(glover, GloverApplication.class.getResource("glover.fxml"));
+
+    }
+
+    @FXML
+    void showGloverHome(ActionEvent event) {
+        showButtonOnAction(gloverHome, GloverApplication.class.getResource("glover.fxml"));
+    }
+
+    @FXML
+    void showSettingHome(ActionEvent event) {
+
+    }
+
 
         private void showButtonOnAction(Button button, URL url){
             try {

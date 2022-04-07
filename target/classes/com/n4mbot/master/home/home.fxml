@@ -35,7 +35,7 @@
                                 <Insets />
                             </opaqueInsets>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="button1" stylesheets="@home.css" text="SIRI" textFill="WHITE">
+                        <Button fx:id="siriHome" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="14.0" mnemonicParsing="false" onAction="#showSiriHome" prefHeight="50.0" prefWidth="200.0" styleClass="button1" stylesheets="@home.css" text="SIRI" textFill="WHITE">
                             <graphic>
                                 <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -53,7 +53,7 @@
                                 <Insets />
                             </opaqueInsets>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="72.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="button1" stylesheets="@home.css" text="GLOVER" textFill="WHITE">
+                        <Button fx:id="gloverHome" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="72.0" mnemonicParsing="false" onAction="#showGloverHome" prefHeight="50.0" prefWidth="200.0" styleClass="button1" stylesheets="@home.css" text="GLOVER" textFill="WHITE">
                             <graphic>
                                 <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -71,7 +71,7 @@
                                 <Insets />
                             </opaqueInsets>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="208.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="button1" stylesheets="@home.css" text="Parameter" textFill="WHITE">
+                        <Button fx:id="settingHome" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="208.0" mnemonicParsing="false" onAction="#showSettingHome" prefHeight="50.0" prefWidth="200.0" styleClass="button1" stylesheets="@home.css" text="Parameter" textFill="WHITE">
                             <graphic>
                                 <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true" x="5.0">
                                     <image>
@@ -132,7 +132,7 @@
                         <Insets right="50.0" />
                     </HBox.margin>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+                <Button fx:id="siri" mnemonicParsing="false" onAction="#showSiri" prefHeight="90.0" prefWidth="200.0" style="-fx-background-color: transparent;">
                     <graphic>
                         <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -144,7 +144,7 @@
                         <Insets right="50.0" />
                     </HBox.margin>
                 </Button>
-                <Button layoutX="260.0" layoutY="10.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+                <Button fx:id="glover" layoutX="260.0" layoutY="10.0" mnemonicParsing="false" onAction="#showGlover" prefHeight="90.0" prefWidth="200.0" style="-fx-background-color: transparent;">
                     <graphic>
                         <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
                             <image>

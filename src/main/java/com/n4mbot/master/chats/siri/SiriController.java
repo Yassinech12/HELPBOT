@@ -1,4 +1,4 @@
-package com.n4mbot.master.chats.alexa;
+package com.n4mbot.master.chats.siri;
 
 import com.n4mbot.master.home.HomeApplication;
 import com.n4mbot.service.Main;
@@ -7,27 +7,22 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
-import javafx.scene.text.*;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
-
-import java.util.UUID;
 
 import java.net.URL;
 
 
-
-public class AlexaController {
+public class SiriController {
 
     @FXML
     private Button goBack;
@@ -40,13 +35,12 @@ public class AlexaController {
     @FXML
     private ImageView imageViewMe;
 
-    private final Main main = new Main("alexa.xml");
+    private final Main main = new Main("siri.xml");
 
     public void goBackOnAction(ActionEvent event) {
         showByButton(goBack, HomeApplication.class.getResource("home.fxml"));
     }
-
-    public void send2(){
+    public void send(){
         String message = messgaeTextField.getText();
 //        Image image = new Image("D:\\n4mbot\\src\\main\\resources\\com\\n4mbot\\master\\chats\\alexa\\images\\moi.png");
         if (!message.isEmpty()) {
@@ -84,5 +78,4 @@ public class AlexaController {
             ed.printStackTrace();
         }
     }
-
 }

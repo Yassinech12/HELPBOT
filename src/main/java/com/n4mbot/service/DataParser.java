@@ -8,7 +8,9 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -26,18 +28,17 @@ public class DataParser {
     public  int stateCounter = 1000;
 
     // default constructor
-    public DataParser() {
+    public DataParser(String file) {
 
         // Load the XML file and parse it
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
         try {
-
             //Using factory get an instance of document builder
             DocumentBuilder db = dbf.newDocumentBuilder();
 
             //parse using builder to get DOM representation of the XML file
-            dom = db.parse("data.xml");
+            dom = db.parse(file);
 
             // Load configuration and states from the XML file
             loadConfiguration();

@@ -1,11 +1,11 @@
 .anchore{
-    -fx-background-color: linear-gradient( to right ,#2C3E50, #FD746C);
+    -fx-background-color: linear-gradient( to left top,#36096d, #37d5d6 );
 }
 .pane{
-    -fx-background-color: #2C3E50;
+    -fx-background-color: #4c6ead;
 }
 .txt{
-    -fx-background-color: #0B486B;
+    -fx-background-color: #4c6ead;
     -fx-background-radius: 100px;
 }
 .txtf{
@@ -17,7 +17,7 @@
 }
 .butt{
     -fx-font-weight: bold;
-    -fx-background-color: #0B486B;
+    -fx-background-color: #36096d;
     -fx-background-radius: 32;
     -fx-font-size: 16;
     -fx-text-fill: white;
@@ -27,20 +27,19 @@
     -fx-background-color: white;
     -fx-background-radius: 32;
     -fx-font-size: 16;
-    -fx-text-fill: #2C3E50 ;
+    -fx-text-fill: #36096d ;
     -fx-background-color:  white;
     -fx-border-radius: 20;
     -fx-border-width: 3;
-    -fx-border-color:#2C3E50;
+    -fx-border-color: #36096d;
 }
 .butt:pressed{
     -fx-font-weight: bold;
     -fx-background-color: white;
     -fx-background-radius: 32;
-    -fx-font-size: #2C3E50 ;
-    -fx-background-color: #2C3E50;
+    -fx-font-size: #36096d ;
+    -fx-background-color:  #36096d;
     -fx-border-radius: 20;
     -fx-border-width: 3;
     -fx-rotate: 10;
 }
-/*0B486B

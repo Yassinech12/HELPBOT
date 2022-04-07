@@ -10,10 +10,10 @@ public class Main {
     public Bot bot;
 
     // default constructor
-    public Main() {
+    public Main(String file) {
 
         // construct a data parser
-        DataParser dp = new DataParser();
+        DataParser dp = new DataParser(file);
 
         // construct new bot with level 0 as default and given data parser
         this.bot = new Bot("0", dp);
@@ -51,7 +51,7 @@ public class Main {
 
     // End of variables declaration//GEN-END:variables
     public static void main(String[] args) {
-        Main main = new Main();
+        Main main = new Main("data.xml");
         System.out.println(main.chatBot(main.bot));
         System.out.println(main.send("ayoub", main.bot));
         System.out.println(main.send("fine", main.bot));

@@ -1,0 +1,18 @@
+.anchore{
+    -fx-background-color: linear-gradient( to left top,#36096d, #37d5d6 );
+}
+.pane{
+    -fx-background-color: #4c6ead;
+}
+.txt{
+    -fx-background-color: #4c6ead;
+    -fx-background-radius: 100px;
+}
+.txtf{
+    -fx-background-color: #8ca8a2;
+    -fx-background-radius: 100px;
+}
+.texte{
+    -fx-background-radius: 100px;
+}
+
